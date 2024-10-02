@@ -1,4 +1,4 @@
-name: Update copyright year(s) in license file
+name: Update copyright year
 
 on:
   workflow_dispatch:
@@ -18,4 +18,6 @@ jobs:
           path: |
             NOTICE.txt
             README.md
+          branchName: license/no-jira-update-year-{{currentYear}}
+          prTitle: NO-JIRA - Update copyright year
           commitTitle: NO-JIRA - Update copyright year
