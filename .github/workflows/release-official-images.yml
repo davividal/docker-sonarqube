@@ -32,6 +32,7 @@ jobs:
         name: docker-official-images-release-file-${{ github.sha }}
         path: docker-official-images/official_images.txt
         retention-days: 1
+        if-no-files-found: error
   create-pr:
     runs-on: ubuntu-latest
     permissions:
@@ -68,4 +69,3 @@ jobs:
         push-to-fork: ${{ github.repository_owner }}/official-images
         body: ""
         labels: automated-release
-      
