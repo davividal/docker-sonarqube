@@ -33,6 +33,9 @@ jobs:
         path: docker-official-images/official_images.txt
         retention-days: 1
         if-no-files-found: error
+    - name: Sleep for 30 seconds
+      run: sleep 30s
+      shell: bash
   create-pr:
     runs-on: ubuntu-latest
     permissions:
